@@ -1,8 +1,7 @@
 package com.example.loginapplication.components
 
-import androidx.compose.foundation.layout.fillMaxWidth
+
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -16,7 +15,7 @@ fun EditButton(
     text: String,
     enabled: Boolean,
     modifier: Modifier = Modifier
-){
+) {
     Button(
         onClick = onClick,
         enabled = enabled,
@@ -26,3 +25,4 @@ fun EditButton(
         Text(text = text)
     }
 }
+

@@ -26,7 +26,6 @@ fun StartScreen(
     modifier: Modifier = Modifier,
     navController: NavController
 ) {
-
     LaunchedEffect(Unit) {
         kotlinx.coroutines.delay(3000)
         navController.navigate(LoginAppScreens.MainScreen.route)

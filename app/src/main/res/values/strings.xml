@@ -5,4 +5,7 @@
     <string name="start_description">Prepared by Yılmaz Naycı</string>
     <string name="sign_in">Sign In</string>
     <string name="sign_up">Sign Up</string>
+    <string name="email_error">Please enter a valid email</string>
+    <string name="password_error">The Password should be at least 6 characters</string>
+    <string name="name_error">The name should be at least 3 characters</string>
 </resources>
