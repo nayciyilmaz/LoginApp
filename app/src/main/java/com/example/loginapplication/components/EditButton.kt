@@ -1,6 +1,8 @@
 package com.example.loginapplication.components
 
 
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.Button
 import androidx.compose.material3.Text
@@ -19,7 +21,9 @@ fun EditButton(
     Button(
         onClick = onClick,
         enabled = enabled,
-        modifier = modifier.size(width = 148.dp, height = 48.dp),
+        modifier = modifier
+            .fillMaxWidth()
+            .padding(start = 64.dp, end = 64.dp),
         shape = RectangleShape
     ) {
         Text(text = text)

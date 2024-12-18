@@ -7,8 +7,6 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
@@ -30,7 +28,6 @@ fun SignInScreen(
     modifier: Modifier = Modifier,
     viewModel: LoginViewModel
 ) {
-
     Text(
         text = stringResource(id = R.string.sign_in),
         modifier = Modifier.padding(start = 32.dp, top = 32.dp),
@@ -50,7 +47,6 @@ fun SignInScreen(
                 imeAction = ImeAction.Next,
                 keyboardType = KeyboardType.Email
             ),
-            singleLine = true,
             supportingText = if (!viewModel.isEmailValid() && !viewModel.isEmailBlank()) {
                 R.string.email_error
             } else {
@@ -65,7 +61,6 @@ fun SignInScreen(
                 imeAction = ImeAction.Done,
                 keyboardType = KeyboardType.Number
             ),
-            singleLine = true,
             modifier = modifier.padding(top = 12.dp, bottom = 12.dp),
             supportingText = if (!viewModel.isPasswordValid() && !viewModel.isPasswordBlank()) {
                 R.string.password_error
@@ -75,8 +70,11 @@ fun SignInScreen(
         )
         EditButton(
             text = "Contunie",
-            onClick = { navController.navigate(LoginAppScreens.HomePageScreen.route) },
-            enabled = viewModel.isEmailAndPasswordValid(),
+            onClick = {
+                navController.navigate(LoginAppScreens.HomePageScreen.route)
+                viewModel.isSignInReset()
+            },
+            enabled = viewModel.isEmailAndPasswordValid()
         )
     }
 }

@@ -31,6 +31,17 @@ class LoginViewModel : ViewModel() {
         email = value
     }
 
+    fun isSignInReset() {
+        email = ""
+        password = ""
+    }
+
+    fun isSignUpReset() {
+        email = ""
+        password = ""
+        username = ""
+    }
+
     fun isEmailValid() = Patterns.EMAIL_ADDRESS.matcher(email).matches()
 
     fun isEmailBlank() = email.isBlank()
@@ -41,7 +52,7 @@ class LoginViewModel : ViewModel() {
 
     fun isNameValid() = username.trim().length >= 3
 
-    fun isNameBlank() = username.isNotBlank()
+    fun isNameBlank() = username.isBlank()
 
     fun isEmailAndPasswordValid() = isEmailValid() && isPasswordValid()
 

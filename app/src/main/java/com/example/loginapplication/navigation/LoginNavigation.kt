@@ -5,6 +5,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.loginapplication.screens.HomepageScreen
 import com.example.loginapplication.screens.MainScreen
 import com.example.loginapplication.screens.SignInScreen
 import com.example.loginapplication.screens.SignUpScreen
@@ -16,7 +17,7 @@ fun LoginNavigation() {
     val navController = rememberNavController()
     val viewModel: LoginViewModel = viewModel()
 
-    NavHost(navController = navController, startDestination = LoginAppScreens.MainScreen.route) {
+    NavHost(navController = navController, startDestination = LoginAppScreens.StartScreen.route) {
         composable(route = LoginAppScreens.StartScreen.route) {
             StartScreen(navController = navController)
         }
@@ -36,7 +37,7 @@ fun LoginNavigation() {
             )
         }
         composable(route = LoginAppScreens.HomePageScreen.route) {
-
+            HomepageScreen(navController = navController)
         }
     }
 }

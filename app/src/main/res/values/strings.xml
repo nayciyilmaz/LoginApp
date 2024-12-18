@@ -8,4 +8,7 @@
     <string name="email_error">Please enter a valid email</string>
     <string name="password_error">The Password should be at least 6 characters</string>
     <string name="name_error">The name should be at least 3 characters</string>
+    <string name="log_out">Log out</string>
+    <string name="logOut_message"> Log Out</string>
+    <string name="alert_setMessage"> Are you sure you want to log out?</string>
 </resources>

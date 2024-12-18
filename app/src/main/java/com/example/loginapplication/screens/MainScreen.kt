@@ -46,7 +46,7 @@ fun MainScreen(
         EditButton(
             onClick = { navController.navigate(LoginAppScreens.SignUpScreen.route) },
             text = stringResource(R.string.sign_up),
-            enabled = true
+            enabled = true,
         )
     }
 }
