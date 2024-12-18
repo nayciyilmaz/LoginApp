@@ -12,15 +12,12 @@ Gradients and Styling: Features a modern look with gradient backgrounds and styl
 
 ## Project Structure
 
-Navigation
 LoginNavigation.kt: Central navigation component using NavHost to define routes for different app screens.
-Screens
 StartScreen.kt: Displays a splash screen with a gradient background and navigates to the main screen after a delay.
 SignUpScreen.kt: Contains the sign-up form with input fields for name, email, and password, including validation logic.
 SignInScreen.kt: Allows users to sign in with pre-validated credentials.
 HomepageScreen.kt: Displays the homepage with a logout button that triggers a confirmation alert dialog.
 MainScreen.kt: Provides options for users to navigate between sign-in and sign-up screens.
-ViewModel
 LoginViewModel.kt: Handles the business logic for validating user inputs and managing app state during sign-up and login processes.
 
 ## Technologies Used
